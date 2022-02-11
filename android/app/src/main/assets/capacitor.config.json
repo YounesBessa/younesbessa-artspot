@@ -1,0 +1,14 @@
+{
+	"appId": "fr.younesbessa.artspot",
+	"appName": "Art",
+	"webDir": "www",
+	"bundledWebRuntime": false,
+	"plugins": {
+		"SplashScreen": {
+			"launchShowDuration": 4000
+		}
+	},
+	"server": {
+		"url": "http://192.168.0.16:8100"
+	}
+}

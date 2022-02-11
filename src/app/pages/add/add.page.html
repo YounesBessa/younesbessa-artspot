@@ -1,0 +1,42 @@
+<app-header title="Ajouter une oeuvre"></app-header>
+
+<ion-content>
+    <form #artForm="ngForm" (ngSubmit)="save()">
+        <ion-item>
+            <ion-label position="floating">Nom de l'oeuvre</ion-label>
+            <ion-input [(ngModel)]="art.name" name="name" required
+                       minlength="3" maxlength="60" #name="ngModel"></ion-input>
+        </ion-item>
+        <app-error *ngIf="!name.valid && name.touched"
+                   message="Vous devez saisir un nom entre 3 et 60 caractères"></app-error>
+
+        <ion-item>
+            <ion-label position="floating">URL de l'image</ion-label>
+            <ion-input [(ngModel)]="art.picture" name="picture" required
+                       pattern="https://.*" #picture="ngModel"></ion-input>
+        </ion-item>
+        <app-error *ngIf="!picture.valid && picture.touched"
+                   message="Vous devez saisir une URL valide"></app-error>
+
+        <ion-item>
+            <ion-label position="floating">Description</ion-label>
+            <ion-textarea [(ngModel)]="art.description" name="description" required
+                          minlength="10" maxlength="500" #description="ngModel"></ion-textarea>
+        </ion-item>
+        <app-error *ngIf="!description.valid && description.touched"
+                   message="Vous devez saisir une description entre 10 et 500 caractères"></app-error>
+
+        <ion-item>
+            <ion-label>Pays</ion-label>
+            <ion-select [(ngModel)]="art.country" name="country" required #country="ngModel">
+                <ion-select-option *ngFor="let country of countries" value="{{ country.code|lowercase }}">
+                    {{ country.name }}
+                </ion-select-option>
+            </ion-select>
+        </ion-item>
+        <app-error *ngIf="!country.valid && country.touched"
+                   message="Vous devez séléctionner un pays"></app-error>
+
+        <ion-button type="submit" size="large" [disabled]="!artForm.form.valid">Ajouter</ion-button>
+    </form>
+</ion-content>

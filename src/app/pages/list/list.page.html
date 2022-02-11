@@ -1,0 +1,32 @@
+<app-header title="Nos oeuvres"></app-header>
+
+<ion-content>
+    <section *ngIf="!loading; else loader">
+        <div *ngIf="arts; else error">
+            <ion-card *ngFor="let art of arts" [routerLink]="['/show', art.id]">
+                <img [src]="art.picture" [alt]="art.name" class="cover">
+                <ion-card-header>
+                    <ion-card-title>
+                        {{ art.name }}
+                        <img [src]="art.country|countryFlag" [alt]="art.name" class="flag">
+                    </ion-card-title>
+                </ion-card-header>
+            </ion-card>
+        </div>
+
+        <ng-template #error>
+            <app-error></app-error>
+        </ng-template>
+    </section>
+
+    <ng-template #loader>
+        <app-loader></app-loader>
+    </ng-template>
+
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button routerLink="/add" color="secondary">
+            <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+</ion-content>
+

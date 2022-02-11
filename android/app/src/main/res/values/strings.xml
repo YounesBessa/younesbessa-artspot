@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">ArtSpot</string>
+    <string name="title_activity_main">ArtSpot</string>
+    <string name="package_name">fr.younesbessa.artspot</string>
+    <string name="custom_url_scheme">fr.younesbessa.artspot</string>
+</resources>

@@ -1,0 +1,44 @@
+@import "~@ionic/angular/css/core.css";
+
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+.flag{
+    width: 30px;
+    border-radius: 5px;
+    vertical-align: baseline;
+}
+
+.collapsed{
+    display: -webkit-box;
+    position: relative;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+    &:before{
+        content: "";
+        position: absolute;
+        background-image: linear-gradient(to bottom, rgba(0,0,0,0), var(--ion-background-color));
+        bottom: 0;
+        top: 50%;
+        left: 0;
+        right: 0;
+    }
+}
+
+
+
+
+
+

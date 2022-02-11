@@ -1,0 +1,46 @@
+{
+  "arts": [
+    {
+      "id": 1,
+      "name": "Paris",
+      "picture": "https://static.actu.fr/uploads/2021/03/adobestock-264549883.jpeg",
+      "country": "fr",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, aut consequuntur dolores doloribus error exercitationem, fugit necessitatibus omnis quae quam quos sed suscipit ut. Itaque quod similique sunt. Corporis, minima."
+    },
+    {
+      "id": 2,
+      "name": "Berlin",
+      "picture": "https://a.cdn-hotels.com/gdcs/production33/d1613/c381eca0-58ef-11e8-9946-0242ac110009.jpg",
+      "country": "de",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, aut consequuntur dolores doloribus error exercitationem, fugit necessitatibus omnis quae quam quos sed suscipit ut. Itaque quod similique sunt. Corporis, minima."
+    },
+    {
+      "id": 3,
+      "name": "Rome",
+      "picture": "https://img.lemde.fr/2019/04/15/53/0/500/249/1440/720/60/0/875bc88_4S376NSwaGX_d8P5dfgCYl5c.jpg",
+      "country": "it",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, aut consequuntur dolores doloribus error exercitationem, fugit necessitatibus omnis quae quam quos sed suscipit ut. Itaque quod similique sunt. Corporis, minima."
+    },
+    {
+      "id": 4,
+      "name": "Amsterdam",
+      "picture": "https://www.costakreuzfahrten.ch/content/dam/costa/inventory-assets/ports/AMS/ams-amsterdam-port-1b.jpg",
+      "country": "nl",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, aut consequuntur dolores doloribus error exercitationem, fugit necessitatibus omnis quae quam quos sed suscipit ut. Itaque quod similique sunt. Corporis, minima."
+    },
+    {
+      "id": 5,
+      "name": "Londres",
+      "picture": "https://cdn-images.welcometothejungle.com/BvTCyTAl69dWdJAbxkpZYohfWaj7crtOpwekmypGOqU/rs:auto:2000::/q:85/czM6Ly93dHRqLXByb2R1Y3Rpb24vdXBsb2Fkcy9hcnRpY2xlL2ltYWdlLzQ3NjEvMTUyMTAzL3BhcnRpci10cmF2YWlsbGVyLWxvbmRyZXMuanBn",
+      "country": "gb",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, aut consequuntur dolores doloribus error exercitationem, fugit necessitatibus omnis quae quam quos sed suscipit ut. Itaque quod similique sunt. Corporis, minima."
+    },
+    {
+      "name": "Tokyo",
+      "picture": "https://stillmed.olympics.com/media/Images/OlympicOrg/News/2019/07/23/2019-07-23-Trailblazing-Tokyo-looking-ahead-featured.jpg",
+      "description": "Blablablaqdsfqsdqdsfqdsfqdsqfdsqdfqdsfqs qsdqs dqsdfqds fqs ddsq fqds qsd dsq fqsdf sd",
+      "country": "jp",
+      "id": 6
+    }
+  ]
+}

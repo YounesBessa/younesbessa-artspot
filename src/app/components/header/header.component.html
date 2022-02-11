@@ -1,0 +1,15 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/"></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+            <img [src]="icon" alt="Logo de ArtSpot">
+            {{ title }}
+        </ion-title>
+
+        <ion-item slot="end" color="primary">
+            {{ batteryLevel }}%
+        </ion-item>
+    </ion-toolbar>
+</ion-header>

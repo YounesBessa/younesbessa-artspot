@@ -1,0 +1,31 @@
+<app-header
+    [title]="art ? art.name : 'Chargement ...'"
+    [icon]="art ? (art.country|countryFlag) : null">
+</app-header>
+
+<ion-content>
+    <article class="art" *ngIf="!loading; else loader">
+        <div *ngIf="art; else error">
+            <img [src]="art.picture" [alt]="art.name" class="cover">
+            <h1>
+                {{ art.name }}
+                <img [src]="art.country|countryFlag" [alt]="art.name" class="flag">
+            </h1>
+            <p appExpandable>
+                {{ art.description }}
+            </p>
+
+            <ion-button [routerLink]="['/view', art.id]">
+                Prendre une photo de mon voyage
+            </ion-button>
+        </div>
+
+        <ng-template #error>
+            <app-error></app-error>
+        </ng-template>
+    </article>
+
+    <ng-template #loader>
+        <app-loader></app-loader>
+    </ng-template>
+</ion-content>
