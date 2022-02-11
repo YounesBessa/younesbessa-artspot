@@ -5,7 +5,6 @@ import { NativeGeocoder } from '@awesome-cordova-plugins/native-geocoder/ngx';
 import { Geolocation } from '@capacitor/geolocation';
 
 import { Art } from '../../models/art';
-import { countries } from '../../constants/countries';
 import { ArtService } from '../../services/art.service';
 
 @Component({
@@ -15,7 +14,6 @@ import { ArtService } from '../../services/art.service';
 })
 export class AddPage implements OnInit {
     art = new Art();
-    countries = countries;
 
     constructor(
         private geocoder: NativeGeocoder,
@@ -37,7 +35,7 @@ export class AddPage implements OnInit {
                     this.art.name = address.locality;
                 }
                 if(address.countryCode){
-                    this.art.country = address.countryCode.toLowerCase();
+                    this.art.location = address.countryCode.toLowerCase();
                 }
             }
         });
@@ -46,7 +44,7 @@ export class AddPage implements OnInit {
     save(){
         this.artService.add(this.art).subscribe(async () => {
             const toast = await this.toastCtrl.create({
-                message: 'Votre destination à été ajoutée',
+                message: 'Votre oeuvre à été ajoutée',
                 duration: 5000,
                 color: 'success',
             });

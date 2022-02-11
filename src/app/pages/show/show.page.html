@@ -1,6 +1,5 @@
 <app-header
-    [title]="art ? art.name : 'Chargement ...'"
-    [icon]="art ? (art.country|countryFlag) : null">
+    [title]="art ? art.name : 'Chargement ...'">
 </app-header>
 
 <ion-content>
@@ -9,15 +8,13 @@
             <img [src]="art.picture" [alt]="art.name" class="cover">
             <h1>
                 {{ art.name }}
-                <img [src]="art.country|countryFlag" [alt]="art.name" class="flag">
             </h1>
-            <p appExpandable>
-                {{ art.description }}
-            </p>
-
-            <ion-button [routerLink]="['/view', art.id]">
-                Prendre une photo de mon voyage
-            </ion-button>
+            <h3 appExpandable>
+                Localisation: {{ art.location }}
+            </h3>
+            <h4 appExpandable>
+                Ajoutée le {{ art.date }}
+            </h4>
         </div>
 
         <ng-template #error>
